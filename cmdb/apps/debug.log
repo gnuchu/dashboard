@@ -1,0 +1,1 @@
+SQLSTATE: 23000code: 547message: [Microsoft][ODBC Driver 13 for SQL Server][SQL Server]The UPDATE statement conflicted with the FOREIGN KEY constraint "fk_rails_0d1aa957cb". The conflict occurred in database "RMCMDB", table "dbo.databasesettings", column 'id'.SQLSTATE: 01000code: 3621message: [Microsoft][ODBC Driver 13 for SQL Server][SQL Server]The statement has been terminated.

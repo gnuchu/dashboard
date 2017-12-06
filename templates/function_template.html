@@ -1,0 +1,15 @@
+function drawChart%d() {
+  var data = google.visualization.arrayToDataTable([
+    ['Disk Space', 'Gb'],
+    ['Used', %d],
+    ['Free', %d]
+  ]);
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart%d'));
+  chart.draw(data,{
+    is3D: true,
+    colors: ['#ff0000','#0000ff']
+  });
+}
+google.charts.setOnLoadCallback(drawChart%d);
+

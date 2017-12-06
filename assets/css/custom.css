@@ -1,0 +1,156 @@
+.square {
+  height: 15px;
+  width: 15px;
+}
+
+.value-missing-from-target {
+  background: #aaa7a7;
+  color: #ffffff;
+}
+
+.value-different-from-target {
+  background: #bc0d03;
+  color: #fff;
+}
+
+.same-as-each-other {
+  background: #2a8413;
+  color: #fff;
+}
+
+.different-from-each-other {
+  background: #bc0d03;
+  color: #fff;
+}
+
+.equals-production {
+  background: #b3ecff;
+}
+
+.greater-than-production {
+  background: #ffff66;
+}
+
+.less-than-production {
+  background: #ffb380;
+}
+
+.no-version-information-available {
+  background: #aaa7a7;
+  color: #ffffff;
+}
+
+.app-not-deployed {
+  background: #e8e3e4;
+}
+
+.app-switched-off {
+  background: #7086a8;
+}
+
+.table {
+  margin-top: 15px;
+}
+
+.table>tbody .hidden-row {
+   padding: 0px 8px;
+}
+
+body {
+  overflow-y: scroll;
+  /*min-height: 2000px;*/
+  padding-top: 70px;
+}
+
+.form-login {
+  background-color: #f8f8f8;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+  border-color:#d2d2d2;
+  border-width: 5px;
+  box-shadow:0 1px 0 #cfcfcf;
+}
+
+h4 { 
+  border:0 solid #fff; 
+  border-bottom-width:1px;
+  padding-bottom:10px;
+  text-align: center;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.sectionheader {
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.sectiondivider {
+  background-color: #ccc !important;
+  text-align: center;
+  font-weight: bold;
+}
+
+.sectionheader2 {
+  background-color: #ede0d5 !important;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.highlight {
+    background-color: #bbbbbb;
+}
+
+.left-border {
+   border-left: thick solid #e0e0e0 !important;
+}
+
+.table-sub-heading {
+  text-align: center;
+}
+
+div[contenteditable="true"] {
+  background: white !important;
+  resize:none;
+}
+
+
+/*** Works on common browsers ***/
+::selection {
+  background-color: #f4d03f;
+  color: #212f3d;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+  background-color: #f4d03f;
+  color: #212f3d;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+  background-color: #f4d03f;
+  color: #212f3d;
+}
+
+::-ms-selection {
+  background-color: #f4d03f;
+  color: #212f3d;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+  background-color: #f4d03f;
+  color: #212f3d;
+}
+

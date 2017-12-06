@@ -1,0 +1,93 @@
+<script type="text/javascript">
+  $(function(){
+    $('#releasebrancheditor').on('keypress', function(event){
+      if(event.which == 13) {
+        //Stop return doing default - i.e. putting in a carriage return.
+        event.preventDefault();
+
+        var env = $('#environmentname').text();
+        var new_release_branch = event.target.textContent;
+        var values = new Object;
+        values['env'] = env;
+        values['new_release_branch'] = new_release_branch;
+        values['changetype'] = 'releasebranch';
+
+        $.ajax({
+          url: 'detailsview.php',
+          type: 'post',
+          data: values,
+          success: function(response) {
+            var message = "Release branch for environment " + response.env + " was updated to " + response.new_release_branch;
+            alert(message);
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            //
+          }
+        });
+        window.getSelection().removeAllRanges();
+      }
+      if(event.which == 27) {
+        //Unfocus editable content.
+        event.preventDefault();
+        window.getSelection().removeAllRanges();
+      }
+    });
+
+    $('#ownereditor').on('keypress', function(event) {
+
+      if(event.which == 13) {
+        event.preventDefault();
+
+        var env = $('#environmentname').text();
+        var new_owner = event.target.textContent;
+        var values = new Object;
+        values['env'] = env;
+        values['new_owner'] = new_owner;
+        values['changetype'] = 'owner';
+
+        $.ajax({
+          url: 'detailsview.php',
+          type: 'post',
+          data: values,
+          success: function(response) {
+            var message = "Owner for environment " + response.env + " was updated to " + response.new_owner;
+            alert(message);
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            //
+          }
+        });
+        window.getSelection().removeAllRanges();
+      }
+    });
+
+    $('#descriptioneditor').on('keypress', function(event) {
+
+      if(event.which == 13) {
+        event.preventDefault();
+
+        var env = $('#environmentname').text();
+        var new_description = event.target.textContent;
+        var values = new Object;
+        values['env'] = env;
+        values['new_description'] = new_description;
+        values['changetype'] = 'description';
+
+        $.ajax({
+          url: 'detailsview.php',
+          type: 'post',
+          data: values,
+          success: function(response) {
+            var message = "Description for environment " + response.env + " was updated to " + response.new_description;
+            alert(message);
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            //
+          }
+        });
+        window.getSelection().removeAllRanges();
+      }
+    });
+
+  });
+</script>
