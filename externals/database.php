@@ -2,13 +2,13 @@
   if(gethostname() !== 'BX-CINAPPD02') {
     define('TEST_DATABASE', true);
     $serverName = "localhost\SQLEXPRESS";
-    $connectionInfo = array( "Database"=>"RMCMDB", "UID"=>"JenkinsUser", "PWD"=>"P@ssw0rd", "CharacterSet" =>"UTF-8");
+    $connectionInfo = array( "Database"=>"*****", "UID"=>"***********", "PWD"=>"*******", "CharacterSet" =>"UTF-8");
     $conn = sqlsrv_connect( $serverName, $connectionInfo); 
   }
   else {
     define('TEST_DATABASE', false);
-    $serverName = "BX1-PRD-SQL01.network.uk.ad,1433";
-    $connectionInfo = array( "Database"=>"RMCMDB", "UID"=>"JenkinsUser", "PWD"=>"Ak5TLEIB5HSDSB2otvN0ONdejwLkXtup!");
+    $serverName = "***********";
+    $connectionInfo = array( "Database"=>"*****", "UID"=>"***********", "PWD"=>"************");
     $conn = sqlsrv_connect( $serverName, $connectionInfo);
   }
   
